@@ -5,6 +5,5 @@ part-00001.txt:
 
 input.txt jsoncatalog.txt: part-00001.txt
 	python text_breaking_VT.py 
-	mv input.txt BookwormDB/files/texts
-	mv jsoncatalog.txt BookwormDB/files/metadata
+	
 
