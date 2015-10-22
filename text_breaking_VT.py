@@ -17,8 +17,8 @@ for row in a.iterrows():
 	    metadata = dict()
 	    for key in ["uid","cluster","size","date","id","series","title","url","ed","issue","corpus","text"]: # This can be longer
 	        metadata[key] = indexed[key]
-	    metadata["filename"] = str(indexed["uid"])
+	    metadata["filename"] = str(indexed["id"])
 	    metadata["searchstring"] = str(indexed["url"])
 	    metadata["raw_text"] = str(indexed["text"].replace("\n"," ")) #to get rid of newlines in metadata too
 	    metadata_file.write(json.dumps(metadata) + "\n")
-	    texts.write("%d\t%s\n" %(indexed["uid"],indexed["text"].replace("\n"," ")))
+	    texts.write("%d\t%s\n" %(indexed["id"],indexed["text"].replace("\n"," ")))
